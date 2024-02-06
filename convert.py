@@ -7,7 +7,8 @@
 print("Welcome to the Olden-Souza Python Converter!")
 print("Choose what you would like to:")
 print("1. Distance Conversion (miles <-> kilometers)")
-print("2. Temperature Conversion: (Celsius <-> Fahrenheit)")
+print("2. Currency Conversion (USD <-> Euro)")
+print("3. Temperature Conversion: (Celsius <-> Fahrenheit)")
 
 choice = input("Enter your choice (1, 2, or 3): ")
 
@@ -25,8 +26,15 @@ if choice == '1':
     else:
         print("Invalid choice for distance conversion.")
 
-
 elif choice == '2':
+    print("*** Currency Conversion: USD <-> Euro ***")
+    amount_usd = float(input("Enter amount in USD: "))
+    # Assuming a static exchange rate for demonstration purposes
+    exchange_rate = 0.95  # 1 USD to Euro conversion rate
+    converted_amount = amount_usd * exchange_rate
+    print(f"USD {amount_usd} = EUR {converted_amount:.2f}")
+
+elif choice == '3':
     print("*** Temperature Conversion: (Celsius <-> Fahrenheit) ***")
     conversion_type = input("Enter 1 for Celsius to Fahrenheit, 2 for Fahrenheit to Celsius: ")
     if conversion_type == '1':
